@@ -14,3 +14,9 @@ def is_prime(num):
 #         if num%n==0:
 #             return 0
 #         return 1
+
+def product(list):
+    p = 1
+    for i in list:
+        p *= i
+    return p

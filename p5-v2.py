@@ -8,30 +8,29 @@
 import numpy as np
 import time
 
-# Test contents
-# current = 10
-# mylist = (9, 8, 7, 6, 5)
-
-
+start = time.time()
+iter=0
 current = 2520
 mylist = (19, 18, 17, 16, 15, 14, 13, 12, 11)
 array_length = len(mylist)
 myarray = np.asarray(mylist)
 
-@timeit
 def divisible_in_range(n):
     for x in range(0, array_length): # set to 9 after testing
         while x < array_length and current % myarray[x]==0:
-            # print(myarray[x])
             x += 1
-
+                
         if x == array_length:
             return 1
         else:
             return 0
 
+
 while not divisible_in_range(current):
     current+=20
-    # print(current)
 
-print(current)
+answer = current
+
+print(f'Answer of problem 7: {answer}')
+print(f'In {time.time()-start} second(s)')
+print(f'With {iter} iterations')

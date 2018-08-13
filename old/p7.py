@@ -8,8 +8,8 @@ What is the 10 001st prime number?
 
 from myMathFunc import *
 
-n = 3
-num_prime = 6
+n = 10001
+num_prime = 10001
 prime_count = 0
 highest_prime = 1
 
@@ -17,7 +17,7 @@ while prime_count < num_prime: #starting on second prime, 3
     if is_prime(n):
         prime_count += 1
         highest_prime = n
-        print(highest_prime)
+        # print(highest_prime)
     n += 2
 
 print(highest_prime)
