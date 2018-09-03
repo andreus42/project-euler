@@ -35,26 +35,35 @@ def divisors_count(x):
             count += 1
     return(count)
 
-def next_triangle_numbers(count, value):
+def next_triangle_number(count, value):
     count += 1
     value += count
     return(count, value)
 
 triangle_number = [0, 0]
 
-highest_divisor_count = 0
-i = 0
-while highest_divisor_count < 500:
-    triangle_number = next_triangle_numbers(triangle_number[0], triangle_number[1])
-    # print(f'Next Triangle Number: {triangle_number}')
-    local_divisor_count = divisors_count(triangle_number[1])
-    # print(f'Divsors of {triangle_number[1]}: {local_divisor_count}')
-    i += 1
-    if local_divisor_count > highest_divisor_count:
-        highest_divisor_count = local_divisor_count
+# i = 0
+# while triangle_number[0] < 10000000:
+#     triangle_number = next_triangle_number(triangle_number[0], triangle_number[1])
+#     print(triangle_number)
+#     i += 1
 
-print(f'triangle_number: {triangle_number}')
-print(f'Highest Divisor Count:{highest_divisor_count}')
+print(f'Divisor of {triangle_number} is {divisors_count(triangle_number[1])}')
+
+# highest_divisor_count = 0
+# i = 0
+# while highest_divisor_count < 144:
+#     triangle_number = next_triangle_number(triangle_number[0], triangle_number[1])
+#     # print(f'Next Triangle Number: {triangle_number}')
+#     local_divisor_count = divisors_count(triangle_number[1])
+#     # print(f'Divsors of {triangle_number[1]}: {local_divisor_count}')
+#     i += 1
+#     if local_divisor_count > highest_divisor_count:
+#         print(f'Local Divisor Count: {local_divisor_count}, triangle_number {triangle_number} at {time.time()-start} second(s)')
+#         highest_divisor_count = local_divisor_count
+#
+# print(f'triangle_number: {triangle_number}')
+# print(f'Highest Divisor Count:{highest_divisor_count}')
 
 # for number in range(0,10):
 #     print(triangle_numbers(number))
