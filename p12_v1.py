@@ -1,6 +1,6 @@
 # p11: Largest Product in a Grid
 # https://projecteuler.net/problem=11
-# 9-2-2018, 10:59pm-11:13pm
+# 9-2-2018, 10:59pm-
 """
 Improve performance
 Find the largest product of adjecent numbers (up, down, right, left, diagonal)
@@ -55,8 +55,6 @@ y = 0
 
 largest_product = 1
 this_product = 1
-
-"""Traverse laterally"""
 # Loop through max combos of digits in line of sequence length
 for j in range(0, h):
     for x in range(0, w + 1 - seq_length):
@@ -67,7 +65,6 @@ for j in range(0, h):
             largest_product = this_product
         this_product = 1
 
-"""Traverse vertically"""
 for i in range(0, w):
     for x in range(0, h + 1 - seq_length):
         # current number through end of sequence length
@@ -76,7 +73,7 @@ for i in range(0, w):
         if this_product > largest_product:
             largest_product = this_product
         this_product = 1
-"""Traverse diagonally down left to bottom"""
+
 for y in range(0, h + 1 - seq_length):
     for x in range(0, w + 1 - seq_length):
         # current number through end of sequence length
@@ -86,7 +83,6 @@ for y in range(0, h + 1 - seq_length):
             largest_product = this_product
         this_product = 1
 
-"""Traverse diagonally right to top"""
 for y in range(h-1, seq_length-2, -1):
     for x in range(0, w + 1-seq_length):
         # current number through end of sequence length
