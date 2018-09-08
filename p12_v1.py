@@ -15,6 +15,7 @@ Psuedo Code
 """
 # Timing Tools
 import time
+import math
 start = time.time()
 
 #  Original Triangle Number Function
@@ -27,18 +28,17 @@ start = time.time()
 #     return(count, value)
 
 
-def divisors_count(x):
-    count = 1
-    for num in range (1,x):
-        if x % num == 0:
-            # print(num)
-            count += 1
-    return(count)
-
 def next_triangle_numbers(count, value):
     count += 1
     value += count
     return(count, value)
+
+def divisors_count(n):
+    count = 0
+    for num in range (1,round(math.sqrt(n))+1):
+        if n % num == 0:
+            count += 2
+    return(count)
 
 triangle_number = [0, 0]
 
@@ -48,7 +48,7 @@ while highest_divisor_count < 500:
     triangle_number = next_triangle_numbers(triangle_number[0], triangle_number[1])
     # print(f'Next Triangle Number: {triangle_number}')
     local_divisor_count = divisors_count(triangle_number[1])
-    # print(f'Divsors of {triangle_number[1]}: {local_divisor_count}')
+    print(f'Local Divisor Count: {local_divisor_count}, triangle_number {triangle_number} at {time.time()-start} second(s)')
     i += 1
     if local_divisor_count > highest_divisor_count:
         highest_divisor_count = local_divisor_count
