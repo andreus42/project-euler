@@ -87,7 +87,7 @@ def num_word(x):
         x.pop(0)
     return number
 
-# Testing
+# Testing (by passing a single number)
 # sum = 0
 # word =list(input())
 # word = num_word(word)

@@ -49,3 +49,35 @@ for each1 in Row1:
                                                                 highest_total = total
                                                             count += 1
                                                             print(f'total: {total}, count: {count}')
+
+for each1 in range(n,n+1):
+    print(f'each1)
+    for each2 in range(each1-1,each1+1):
+        print(each2)
+        for each3 in range(each2-1,each2+1):
+            print(each3)
+            for each4 in range(each3-1,each3+1):
+                print(each4)
+                total += each1+each2+each3+each4
+                count +=1
+                if total > highest_total:
+                    highest_total = total
+                print(f'total: {total}, highest_total: {highest_total}, count: {count}')
+
+
+for each1 in range(n,n+1):
+    print(f'row1: {Row1[each1]}')
+    for each2 in range(each1,each1+2):
+        print(f'row2: {Row2[each2]}')
+        for each3 in range(each2,each2+2):
+            print(f'row3: {Row3[each3]}')
+            for each4 in range(each3,each3+2):
+                print(f'row4: {Row4[each4]}')
+                for each5 in range(each4,each4+2):
+                    print(f'row4: {Row5[each5]}')
+                    print(f'Pass: {count}\n')
+                    total += each1+each2+each3+each4+each5
+                    count +=1
+                    if total > highest_total:
+                        highest_total = total
+                        highest_seq = [Row1[n], Row2[each1], Row3[each2], Row4[each3], Row5[each4]]
