@@ -30,109 +30,35 @@ highest_total = 0
 total = 0
 count = 0
 last_seq = []
-n = 0
-# for each1 in range(n,n+1):
-#     for each2 in range(each1,each1+2):
-#         for each3 in range(each2,each2+2):
-#             for each4 in range(each3,each3+2):
-#                 for each5 in range(each4,each4+2):
-#                     for each6 in range(each5,each5+2):
-#                         for each7 in range(each6,each6+2):
-#                             for each8 in range(each7,each7+2):
-#                                 for each9 in range(each8,each8+2):
-#                                     for each10 in range(each9,each9+2):
-#                                         for each11 in range(each10,each10+1):
-#                                             for each12 in range(each11,each11+2):
-#                                                 for each13 in range(each12,each12+2):
-#                                                     for each14 in range(each13,each13+2):
-#                                                         for each15 in range(each14,each14+2):
-#                                                             total += each1+each2+each3+each4+each5+each6+each7+each8+each9+each10+each11+each12+each13+each14+each15
-#                                                             count +=1
-#                                                             if total > highest_total:
-#                                                                 highest_total = total
-#                                                                 highest_seq = (Row1[n], Row2[each1], Row3[each2], Row4[each3], Row5[each4], Row6[each5], Row7[each6], Row8[each7], Row9[each8], Row10[each9], Row11[each10], Row12[each11], Row13[each12], Row14[each13], Row15[each14])
-#                                                                 seq = (Row1[n], Row2[each1], Row3[each2], Row4[each3], Row5[each4], Row6[each5], Row7[each6], Row8[each7], Row9[each8], Row10[each9], Row11[each10], Row12[each11], Row13[each12], Row14[each13], Row15[each14])
-#                                                                 print(last_seq == seq)
-#                                                                 last_seq = seq
-#                                                                 print(seq)
-#                                                                 input()
-#
-#                                                             total = 0
-# total_sum = sum(highest_seq)
-# print(f'Total: {total_sum}, Sum count: {count}, highest_seq: {highest_seq}')
 
-""" Testing on smaller triangle (4 row) """
-"""
-      [75]
-    [95, 64]
-  [17, 47, 82]
-[18, 35, 87, 10]
-"""
-
-highest_total = 0
-total = 0
-count = 0
-highest_seq = []
-last_seq = []
-n = 0
-for each1 in range(n,n+1):
-    print(f'branch1: {range(n,n+1)}')
+for each1 in range(0,1):
     for each2 in range(each1,each1+2):
-        print(f'branch2: {range(each2,each2+1)}')
         for each3 in range(each2,each2+2):
-                print(f'branch3: {range(each3,each3+1)}')
-                for each4 in range(each3,each3+2):
-                    print(f'branch4: {range(each4,each4+1)}')
-                    total += each1+each2+each3+each4
-                if total > highest_total:
-                    highest_total = total
-                    highest_seq = (Row1[n], Row2[each1], Row3[each2], Row4[each3])
-                    seq = (Row1[n], Row2[each1], Row3[each2], Row4[each3])
-                    print(last_seq == seq)
-                    last_seq = seq
-                    print(seq)
-                    input()
-                total = 0
-                total_sum = sum(highest_seq)
+            for each4 in range(each3,each3+2):
+                for each5 in range(each4,each4+2):
+                    for each6 in range(each5,each5+2):
+                        for each7 in range(each6,each6+2):
+                            for each8 in range(each7,each7+2):
+                                for each9 in range(each8,each8+2):
+                                    for each10 in range(each9,each9+2):
+                                        for each11 in range(each10,each10+2):
+                                            for each12 in range(each11,each11+2):
+                                                for each13 in range(each12,each12+2):
+                                                    for each14 in range(each13,each13+2):
+                                                        for each15 in range(each14,each14+2):
+                                                            total = Row1[each1]+ Row2[each1]+ Row3[each2]+ Row4[each3]+ Row5[each4]+ Row6[each5]+ Row7[each6]+ Row8[each7]+ Row9[each8]+ Row10[each9]+ Row11[each10]+ Row12[each11]+ Row13[each12]+ Row14[each13]+ Row15[each14]
+                                                            count +=1
+                                                            if total > highest_total:
+                                                                highest_total = total
+                                                                highest_seq = (Row1[each1], Row2[each2], Row3[each3], Row4[each4], Row5[each4], Row6[each5], Row7[each6], Row8[each7], Row9[each8], Row10[each9], Row11[each10], Row12[each11], Row13[each12], Row14[each13], Row15[each14])
 
+                                                            # seq = (Row1[n], Row2[each1], Row3[each2], Row4[each3], Row5[each4], Row6[each5], Row7[each6], Row8[each7], Row9[each8], Row10[each9], Row11[each10], Row12[each11], Row13[each12], Row14[each13], Row15[each14])
+                                                            # print(last_seq == seq)
+                                                            # last_seq = seq
+                                                            # print(seq)
+
+                                                            total = 0
+total_sum = sum(highest_seq)
 print(f'Total: {total_sum}, Sum count: {count}, highest_seq: {highest_seq}')
 
-# print(f'Answer: {answer}')
-# print(f'Clocked in at {time.time()-start} second(s)')
-# recovery key 1355416-qVHrmCQcqcmNLeSHDkygw8oQKZ59aqYk0OIx2lxj
-
-# for each1 in Row1:
-#     print("row1")
-#     for each2 in Row2:
-#         print("row2")
-#         for each3 in Row3:
-#             print("row3")
-#             for each4 in Row4:
-#                 print("row4")
-#                 for each5 in Row5:
-#                     print("row5")
-#                     for each6 in Row6:
-#                         print("row6")
-#                         for each7 in Row7:
-#                             print("row7")
-#                             for each8 in Row8:
-#                                 print("row8")
-#                                 for each9 in Row9:
-#                                     print("row9")
-#                                     for each10 in Row10:
-#                                         print("row10")
-#                                         for each11 in Row11:
-#                                             print("row11")
-#                                             for each12 in Row13:
-#                                                 print("row12")
-#                                                 for each13 in Row13:
-#                                                     print("row13")
-#                                                     for each14 in Row14:
-#                                                         print("row14")
-#                                                         for each15 in Row15:
-#                                                             print("row15")
-#                                                             total = each1+each2+each3+each4+each5+each6+each7+each8+each9+each10+each11+each12+each13+each14+each15
-#                                                             if total > highest_total:
-#                                                                 highest_total = total
-#                                                             count += 1
-#                                                             print(f'total: {total}, count: {count}')
+#

@@ -19,7 +19,7 @@ def divisible_in_range(n):
     for x in range(0, array_length): # set to 9 after testing
         while x < array_length and current % myarray[x]==0:
             x += 1
-                
+
         if x == array_length:
             return 1
         else:
