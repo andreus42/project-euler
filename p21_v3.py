@@ -55,11 +55,13 @@ for year in range(1900, 2001):
             for day in range(1, leap_days_in_month[month]+1):
                 count += 1
                 if (day_of_week[count%7] == 'Sunday') and (day == 1):
+                    print(f'{day_of_week[count%7]}, {month_of_year[month]}, {day}, {year}')
                     if year > 1900: sunday_count += 1
         else:
             for day in range(1, days_in_month[month]+1):
                 count += 1
                 if (day_of_week[count%7] == 'Sunday') and (day == 1):
+                    print(f'{day_of_week[count%7]}, {month_of_year[month]}, {day}, {year}')
                     if year > 1900: sunday_count += 1
 
 print(f'Days: {count}, Sunday Count: {sunday_count}')
